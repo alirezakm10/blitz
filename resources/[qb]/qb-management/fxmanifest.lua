@@ -2,13 +2,7 @@ fx_version 'cerulean'
 game 'gta5'
 
 description 'qb-bossmenu'
-version '2.1.2'
-
-shared_scripts {
-    '@qb-core/shared/locale.lua',
-    'locales/en.lua',
-    'locales/*.lua',
-}
+version '2.0.0'
 
 client_scripts {
     'client/*.lua'
@@ -20,12 +14,8 @@ server_scripts {
 }
 
 server_exports {
-    'AddMoney',
-    'AddGangMoney',
-    'RemoveMoney',
-    'RemoveGangMoney',
     'GetAccount',
-    'GetGangAccount',
+    'GetaccountGang',
 }
 
 lua54 'yes'
