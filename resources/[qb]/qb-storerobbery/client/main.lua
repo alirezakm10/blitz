@@ -87,8 +87,8 @@ CreateThread(function()
                                         if street2 ~= nil then
                                             streetLabel = streetLabel .. ' ' .. street2
                                         end
-                                        TriggerServerEvent('qb-storerobbery:server:callCops', 'safe', currentSafe, streetLabel, pos)
-                                        copsCalled = true
+                                        local cameraId = Config.Safes[currentSafe].camId
+                                        exports['ps-dispatch']:StoreRobbery(cameraId)
                                     end
                                 else
                                     QBCore.Functions.Notify(Lang:t('error.minimum_store_robbery_police', { MinimumStoreRobberyPolice = Config.MinimumStoreRobberyPolice }), 'error')
@@ -148,8 +148,8 @@ RegisterNetEvent('lockpicks:UseLockpick', function(isAdvanced)
                         if street2 ~= nil then
                             streetLabel = streetLabel .. ' ' .. street2
                         end
-                        TriggerServerEvent('qb-storerobbery:server:callCops', 'cashier', currentRegister, streetLabel, pos)
-                        copsCalled = true
+                        local cameraId = Config.Registers[currentRegister].camId
+                        exports['ps-dispatch']:StoreRobbery(cameraId)
                     end
                 else
                     lockpick(true)
@@ -165,8 +165,8 @@ RegisterNetEvent('lockpicks:UseLockpick', function(isAdvanced)
                         if street2 ~= nil then
                             streetLabel = streetLabel .. ' ' .. street2
                         end
-                        TriggerServerEvent('qb-storerobbery:server:callCops', 'cashier', currentRegister, streetLabel, pos)
-                        copsCalled = true
+                        local cameraId = Config.Registers[currentRegister].camId
+                        exports['ps-dispatch']:StoreRobbery(cameraId)
                     end
                 end
             else

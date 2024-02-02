@@ -46,6 +46,15 @@ QBShared.Gangs = {
             ['3'] = { name = 'Boss', isboss = true },
         },
     },
+    city = {
+        label = 'City Gang',
+        grades = {
+            ['0'] = { name = 'Recruit' },
+            ['1'] = { name = 'Enforcer' },
+            ['2'] = { name = 'Shot Caller' },
+            ['3'] = { name = 'Boss', isboss = true },
+        },
+    },
     triads = {
         label = 'Triads',
         grades = {
