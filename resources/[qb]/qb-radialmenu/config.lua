@@ -582,6 +582,13 @@ Config.JobInteractions = {
             event = 'qb-tunerchip:client:TuneStatus',
             shouldClose = true
         }, {
+            id = 'trafficstop',
+            title = 'Traffic Stop Alert',
+            icon = 'user-lock',
+            type = 'client',
+            event = 'ps-mdt:client:trafficStop',
+            shouldClose = true
+        }, {
             id = 'resethouse',
             title = 'Reset house lock',
             icon = 'key',

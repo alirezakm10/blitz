@@ -386,8 +386,16 @@ function generateDescription(itemData) {
             return `<p>${itemData.info.label}</p>`;
         case "moneybag":
             return `<p><strong>Amount of cash: </strong><span>$${itemData.info.cash}</span></p>`;
-        case "markedbills":
-            return `<p><strong>Worth: </strong><span>$${itemData.info.worth}</span></p>`;
+        case "mdtcitation":
+             $(".item-info-title").html("<p>" + itemData.label + "</p>");
+            $(".item-info-description").html(
+                '<p><strong>Citizen ID: </strong><span>' + itemData.info.citizenId + '</span></p>' +
+                '<p><strong>Fine: </strong><span>' + itemData.info.fine + '</span></p>' +
+                '<p><strong>Citation Date: </strong><span>' + itemData.info.date + '</span></p>' +
+                '<p><strong>Incident ID: </strong><span>' + itemData.info.incidentId + '</span></p>' +
+                '<p><strong>Involved Officer: </strong><span>' + itemData.info.officer + '</span></p>'
+            );
+            break;
         case "visa":
             return `<p><strong>Card Holder: </strong><span>${itemData.info.name}</span></p>`;
         case "mastercard":

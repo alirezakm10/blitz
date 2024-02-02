@@ -66,7 +66,23 @@ Config.MenuControlKey = 238
 -- These are all empty for you to fill in, refer to the .md files for help in filling these in
 
 Config.CircleZones = {
-
+	["weapReg"] = {
+		name = "registerWeapon",
+		coords = vector3(440.61, -981.13, 30.69),
+		radius = 2.5,
+		debugPoly = false,
+		options = {
+		  {
+			num = 1,
+			type = "client",
+			event = "ps-mdt:client:selfregister",
+			icon = 'fa-solid fa-check', -- This is the icon that will display next to this trigger option
+			label = 'Register your Weapon',
+			targeticon = 'fa-solid fa-gun',
+		  }
+		},
+		distance = 2.5,
+	  },
 }
 
 Config.BoxZones = {
